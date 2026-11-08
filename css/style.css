@@ -36,6 +36,13 @@ body {
   text-align: center;
 }
 
+#nav-bar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: justify-end;
+}
+
 @media {max-width: 600px} {
   body {
     font-size: 14px;

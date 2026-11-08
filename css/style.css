@@ -1,5 +1,9 @@
 body {
   background-image: url("../images/space-bg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @media {max-width: 600px} {

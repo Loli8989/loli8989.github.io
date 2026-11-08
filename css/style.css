@@ -1,3 +1,18 @@
 body {
   background: #89CFF0;
 }
+
+@media {max-width: 600px} {
+  body {
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+  
+  header, footer {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}

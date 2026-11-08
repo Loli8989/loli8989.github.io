@@ -14,8 +14,15 @@ body {
   background-attachment: fixed;
 }
 
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #main-heading{
-    padding-top: 300px;
+  padding-top: 300px;
+  font-family: "Permanent Marker", cursive;
 }
 
 #main-heading, #main-subheading {

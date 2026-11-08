@@ -1,5 +1,5 @@
 body {
-  background: #89CFF0;
+  background-image: url("/images/space-bg");
 }
 
 @media {max-width: 600px} {

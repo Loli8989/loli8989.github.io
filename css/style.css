@@ -41,6 +41,7 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   flex-flow: justify-end;
+  color: white;
 }
 
 @media {max-width: 600px} {

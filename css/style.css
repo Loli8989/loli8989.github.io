@@ -12,7 +12,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-color: white;
+}
+
+#main-heading, #main-subheading {
+  color: white;
+  text-align: center;
 }
 
 @media {max-width: 600px} {
